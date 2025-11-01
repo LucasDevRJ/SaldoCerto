@@ -61,9 +61,20 @@ public class Conta {
         System.out.print("Selecione o tipo de conta: ");
         conta.setTipo(entrada.nextInt());
 
-        System.out.print("Digite seu saldo inicial: R$");
+        System.out.print("Digite seu saldo inicial: R$ ");
         conta.setSaldo(entrada.nextDouble());
 
         return conta;
+    }
+
+    public String exibeInformacoesDaConta(Conta conta) {
+        String informacoes = """
+                --------------------|Informações da Conta|--------------------
+                Nome: %s
+                Tipo de conta: %s
+                Saldo inicial: R$ %.2f
+                --------------------------------------------------------------
+                """.formatted(conta.getTitular(), conta.getTipo(), conta.getSaldo());
+        return informacoes;
     }
 }

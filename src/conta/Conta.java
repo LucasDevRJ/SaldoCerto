@@ -67,14 +67,14 @@ public class Conta {
         return conta;
     }
 
-    public String exibeInformacoesDaConta(Conta conta) {
+    public String exibeInformacoesDaConta() {
         String informacoes = """
                 --------------------|Informações da Conta|--------------------
                 Nome: %s
                 Tipo de conta: %s
                 Saldo inicial: R$ %.2f
                 --------------------------------------------------------------
-                """.formatted(conta.getTitular(), conta.getTipo(), conta.getSaldo());
+                """.formatted(this.titular, this.tipo, this.saldo);
         return informacoes;
     }
 }

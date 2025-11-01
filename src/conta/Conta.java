@@ -38,22 +38,21 @@ public class Conta {
     }
 
     public void criarConta() {
-        Conta conta = new Conta();
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Digite o seu nome: ");
-        conta.setTitular(entrada.nextLine());
+        setTitular(entrada.nextLine());
 
         System.out.println("1 - Conta Corrente");
         System.out.println("2 - Conta Poupança");
         System.out.print("Selecione o tipo de conta: ");
-        conta.setTipo(entrada.nextInt());
+        setTipo(entrada.nextInt());
 
         System.out.print("Digite seu saldo inicial: R$ ");
-        conta.setSaldo(entrada.nextDouble());
+        setSaldo(entrada.nextDouble());
     }
 
-    public String exibeInformacoesDaConta() {
+    public void exibeInformacoesDaConta() {
         String informacoes = """
                 --------------------|Informações da Conta|--------------------
                 Nome: %s
@@ -61,7 +60,7 @@ public class Conta {
                 Saldo inicial: R$ %.2f
                 --------------------------------------------------------------
                 """.formatted(this.titular, this.tipo, this.saldo);
-        return informacoes;
+        System.out.println(informacoes);
     }
 
     public void consultarSaldo() {
@@ -70,9 +69,16 @@ public class Conta {
         System.out.println("---------------------------------------------------------");
     }
 
-    public void receberValor(double valor) {
-        double novoSaldo = this.saldo + valor;
+    public void receberValor() {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("--------------------|Valor a Receber|--------------------");
+        System.out.print("Digite o valor a receber: R$ ");
+        double valorAReceber = entrada.nextDouble();
+
+        double novoSaldo = this.saldo + valorAReceber;
         setSaldo(novoSaldo);
         System.out.println("Saldo atualizado R$ " + this.saldo);
+        System.out.println("--------------------------------------------------------");
     }
 }

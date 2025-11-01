@@ -37,6 +37,18 @@ public class Conta {
         }
     }
 
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    private void setSaldo(double saldo) {
+        if (saldo <= 0) {
+            System.out.println("Saldo inválido.");
+        } else {
+            this.saldo = saldo;
+        }
+    }
+
     public Conta criarConta() {
         Conta conta = new Conta();
         Scanner entrada = new Scanner(System.in);
@@ -48,6 +60,9 @@ public class Conta {
         System.out.println("2 - Conta Poupança");
         System.out.print("Selecione o tipo de conta: ");
         conta.setTipo(entrada.nextInt());
+
+        System.out.print("Digite seu saldo inicial: R$");
+        conta.setSaldo(entrada.nextDouble());
 
         return conta;
     }

@@ -18,8 +18,8 @@ Criei uma [apresentação](https://www.linkedin.com/posts/lucas-pereira-de-lima-
 - `Funcionalidade 4`: Transferir Valor;
 - `Funcionalidade 5`: Finalizar Programa;
 
-# 📁 Acesso ao projeto
-* Baixe o projeto clicando <a href="https://github.com/LucasDevRJ/SaldoCerto/archive/refs/heads/main.zip">aqui</a>
+# 📁 Acesso ao projeto 
+* Baixe o projeto clicando <a href="https://github.com/LucasDevRJ/SaldoCerto/archive/refs/heads/master.zip">aqui</a>
 * Coloque o projeto em uma IDE que utilize a linguagem Java
 * Coloque o projeto baixado na IDE
 * Execute!
